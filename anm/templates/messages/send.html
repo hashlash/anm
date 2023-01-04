@@ -1,1 +1,15 @@
 {% extends 'base.html' %}
+
+{% block content %}
+    <form>
+        <img src="https://picsum.photos/200"/>
+        <span class="description">Send anonymous message to @ashlah23</span>
+        <span class="custominput" id="message" role="textbox" contenteditable></span>
+        <button onclick="send()"><h4>Send</h4></button>
+    </form>
+    <script>
+        function send() {
+            alert('submit!');
+        }
+    </script>
+{% endblock %}
