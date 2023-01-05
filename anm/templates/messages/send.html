@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form>
+    <form method="POST" onsubmit="send()">
         <img src="https://picsum.photos/200"/>
         <span class="description">Send anonymous message to @ashlah23</span>
-        <span class="custominput" id="message" role="textbox" contenteditable></span>
-        <button onclick="send()"><h4>Send</h4></button>
+        <span id="placeholder" class="custominput" role="textbox" contenteditable></span>
+        <input id="message" name="message" type="hidden"></input>
+        <button><h4>Send</h4></button>
     </form>
     <script>
         function send() {
-            alert('submit!');
+            placeholder = document.getElementById('placeholder');
+            message = document.getElementById('message');
+            message.value = placeholder.innerHTML;
         }
     </script>
 {% endblock %}
