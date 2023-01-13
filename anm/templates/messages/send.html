@@ -14,5 +14,8 @@
             message = document.getElementById('message');
             message.value = placeholder.innerHTML;
         }
+        {% if message_sent %}
+            alert('Message sent!');
+        {% endif %}
     </script>
 {% endblock %}
