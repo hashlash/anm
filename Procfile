@@ -1,2 +1,2 @@
 web: gunicorn 'anm:create_app()'
-release: flask db upgrade
+release: flask --app anm db upgrade
