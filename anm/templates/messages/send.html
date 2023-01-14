@@ -2,7 +2,7 @@
 
 {% block content %}
     <form method="POST" onsubmit="send()">
-        <img src="https://picsum.photos/200"/>
+        <img src="{{ config.AVATAR_URL }}"/>
         <span class="description">Send anonymous message to @ashlah23</span>
         <span id="placeholder" class="custominput" role="textbox" contenteditable></span>
         <input id="message" name="message" type="hidden"></input>
